@@ -3,8 +3,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import TaskForm from "./Components/TaskForm";
 import TaskList from "./Components/TaskList";
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
 import {
   collection,
   doc,
@@ -15,20 +13,8 @@ import {
 } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 import { Task } from "./Components/types";
-
-const firebaseConfig = {
-  apiKey: import.meta.env.FIREBASE_API_KEY,
-  authDomain: import.meta.env.AUTHDOMAIN,
-  projectId: import.meta.env.PROJECTID,
-  storageBucket: import.meta.env.STORAGEBUCKET,
-  messagingSenderId: import.meta.env.MESSAGINGSENDERID,
-  appId: import.meta.env.APPID,
-  measurementId: import.meta.env.MEASUREMENTID,
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+import { db } from "./firebase";
+import Profile from "./Components/Profile";
 
 const App = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -60,7 +46,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>Task Management Application</h1>
+      <Profile />
+      <h1>
+        Task Management Application
+      </h1>
       <TaskForm addTask={addTask} />
       {!tasks.length ? "No Tasks Found, Click Add Task Button" : null}
       {tasks.length ? (
