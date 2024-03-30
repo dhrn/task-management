@@ -16,7 +16,7 @@ const Profile = () => {
     <div className="profile-section">
       <div className="flex-1">{name}</div>
       <div className="flex-1">{user?.email}</div>
-      <button className="flex-1" onClick={logout}>
+      <button className="flex-1 button-delete" onClick={logout}>
         Logout
       </button>
     </div>
