@@ -17,13 +17,13 @@ import { v4 as uuidv4 } from "uuid";
 import { Task } from "./Components/types";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDNOnDLReXbSAHH-J50z1px6YtpIFVwhj0",
-  authDomain: "pesto-test.firebaseapp.com",
-  projectId: "pesto-test",
-  storageBucket: "pesto-test.appspot.com",
-  messagingSenderId: "280831376182",
-  appId: "1:280831376182:web:cfc032b584f76968bd5197",
-  measurementId: "G-H2DPGBZTPZ",
+  apiKey: import.meta.env.FIREBASE_API_KEY,
+  authDomain: import.meta.env.AUTHDOMAIN,
+  projectId: import.meta.env.PROJECTID,
+  storageBucket: import.meta.env.STORAGEBUCKET,
+  messagingSenderId: import.meta.env.MESSAGINGSENDERID,
+  appId: import.meta.env.APPID,
+  measurementId: import.meta.env.MEASUREMENTID,
 };
 
 // Initialize Firebase
