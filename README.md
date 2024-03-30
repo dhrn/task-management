@@ -6,4 +6,17 @@ User Details:
 email: test@test.com
 password: test@test.com
 
+## Login Page
+![alt text](./docs/login.png)
 
+## Layout
+![alt text](./docs/layout.png)
+
+## Add Task
+![alt text](./docs/add%20Task.png)
+
+## List Task
+![alt text](./docs/list%20task.png)
+
+## Filter Task
+![alt text](./docs/filter.png)
